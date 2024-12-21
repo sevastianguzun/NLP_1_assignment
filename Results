@@ -1,0 +1,65 @@
+Loading data...
+
+
+Preprocessing data...
+Prediction
+0    3672
+1    1500
+Name: count, dtype: int64
+Dataset processed.
+
+Train dataset: 4137
+Train labels: 
+Not spam:  2946 
+Spam:  1191
+
+Test dataset: 1035
+Test labels: 
+Not spam:  726 
+Spam:  309
+
+
+Naive Bayes Classifier...
+Training...
+Testing...
+
+Metrics:
+Accuracy nltk: 87.83%
+Confusion Matrix:
+  |   0   1 |
+--+---------+
+0 |<689> 37 |
+1 |  89<220>|
+--+---------+
+(row = reference; col = test)
+
+F1 Score: 77.74%
+
+
+Creating Feed Forward Neural Network...
+Model:
+FFNN(
+  (fc1): Linear(in_features=3000, out_features=1000, bias=True)
+  (tanh1): Tanh()
+  (fc2): Linear(in_features=1000, out_features=1000, bias=True)
+  (tanh2): Tanh()
+  (fc3): Linear(in_features=1000, out_features=1000, bias=True)
+  (tanh3): Tanh()
+  (fc4): Linear(in_features=1000, out_features=1000, bias=True)
+  (tanh4): Tanh()
+  (fc5): Linear(in_features=1000, out_features=1000, bias=True)
+  (tanh5): Tanh()
+  (fc6): Linear(in_features=1000, out_features=1000, bias=True)
+  (tanh6): Tanh()
+  (output): Linear(in_features=1000, out_features=2, bias=True)
+)
+
+Training...
+Testing...
+
+Metrics:
+Accuracy: 72.66%
+Confusion Matrix:
+[[463  20]
+ [263 289]]
+F1: 67.13%
