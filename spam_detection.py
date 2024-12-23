@@ -1,17 +1,13 @@
 # Import of all needed packages
 from contextlib import redirect_stdout
 import pandas as pd
-import nltk
-import random
 from sklearn.model_selection import train_test_split
 import matplotlib.pyplot as plt
 import numpy as np
 from nltk.classify import NaiveBayesClassifier as nb
 from nltk.metrics import ConfusionMatrix
-from sklearn.metrics import accuracy_score
 from nltk.metrics.scores import accuracy as accu
 import torch
-from torch.utils.data import DataLoader
 from torch import nn
 
 
@@ -186,11 +182,10 @@ def FFNN(train_dataset, test_dataset):
     precision = true_negative / (true_negative + false_positive)
     recall = true_negative / (true_negative + false_negative)
     f1 = 2 * (precision * recall) / (precision + recall)
-    # print(f'Precision: {precision * 100:.2f}%')
     
     confu_matr = np.array([[true_posistive, false_positive], [false_negative, true_negative]])
     print(f'Confusion Matrix:\n{confu_matr}')
-    # print(f'recall: {recall * 100:.2f}%')
+    
 
     print(f'F1: {f1 * 100:.2f}%')
 
